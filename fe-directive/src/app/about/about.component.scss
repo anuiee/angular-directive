@@ -1,0 +1,20 @@
+.row_color{
+    
+    border: 1px solid rgb(47, 0, 255);
+    td{
+    
+        background-color: rgb(155, 209, 246);
+    }
+    th{
+    
+        background-color: rgb(85, 172, 231);
+    }
+}
+button{
+    width: 100px;
+    background-color: blue;
+    color :#fff;
+    border-radius: 5px;
+    border: none;
+    margin: 20px;
+}

@@ -1,0 +1,50 @@
+<p>about works!</p>
+<p>click the button to view the employee details!</p>
+<button  (click)="change()">View Table</button>
+<!-- structural directive -->
+<div *ngIf = "dataValue;else closeTable">
+  <!-- <div [ngClass]="{'row_color': btn_select}"> -->
+    
+        <table class="table table-striped" [ngClass]="{'row_color': btn_select}"> <!-- attribute directive -->
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+                
+                <tr *ngFor="let item of employee">
+                  <th scope="row">{{ item.Id }}</th>
+                  <td>{{ item.First }}</td>
+                  <td>{{ item.Last }}</td>
+                  <td>{{ item.Handle }}</td>
+                </tr>
+                  
+            </tbody>
+        </table> 
+        <button (click)="select()">Select Table</button>
+    <!-- </div> -->
+</div>
+<ng-template #closeTable>
+    <p>table closed....
+</ng-template>
+
+  <!-- <ol> -->
+        
+        <!-- <li *ngFor="let item of books">
+             interpolation  
+           <h5> {{ item.id }} : {{ item.First }} .{{ item.Last }} .{{ item.Handle }}</h5> -->
+                  <!-- </li>
+    </ol> -->
+<!-- ngifelse example start -->
+<!-- <div *ngIf = "isLogin;else islogOut">
+    hello anu
+</div>
+<ng-template #islogOut>
+    closed
+</ng-template> -->
+<!-- ngifelse example end-->
+
